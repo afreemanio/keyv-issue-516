@@ -2,7 +2,6 @@
   "name": "node-typescript-boilerplate",
   "version": "0.0.0",
   "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
-  "type": "module",
   "engines": {
     "node": ">= 18.12 <19"
   },
@@ -31,11 +30,17 @@
     "lint": "eslint . --ext .ts --ext .mts",
     "test": "jest --coverage",
     "prettier": "prettier --config .prettierrc --write .",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "debug": "node --inspect=0.0.0.0:9230 -r ts-node/register src/main.ts"
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@keyv/mysql": "^1.6.2",
+    "dotenv": "^16.0.3",
+    "keyv": "^4.5.2",
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1",
     "tslib": "~2.4"
   },
   "volta": {
